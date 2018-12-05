@@ -3,8 +3,10 @@
 import styleLines from './helper.js'
 
 function init () {
-  fetch('http://127.0.0.1:3000/assets/data.geojson')
-    .then(res => res.json())
+  fetch(`${window.location.href}data`)
+    .then(res => {
+      return res.json()
+    })
     .then(data => setup(data))
     .catch(err => console.error(err))
 }

@@ -1,1 +1,2 @@
 *.geojson
+node_modules/
