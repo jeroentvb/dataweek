@@ -1,16 +1,12 @@
-/* global fetch */
-
 const express = require('express')
 const request = require('request')
 
 module.exports = express()
-  .set('view engine', 'ejs')
-  .set('views', 'templates')
   .use(express.static('static'))
   .get('/', index)
   .get('/data', sendData)
   .use(notFound)
-  .listen(3000, () => console.log('Server listening on port 3000'))
+  .listen(25562, () => console.log('Server listening on port 25562'))
 
 function makeRequest (url) {
   return new Promise((resolve, reject) => {
@@ -22,7 +18,7 @@ function makeRequest (url) {
 }
 
 function index (req, res) {
-  res.render('index')
+  res.sendFile(`${__dirname}/static/index.html`)
 }
 
 function sendData (req, res) {

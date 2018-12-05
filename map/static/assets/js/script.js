@@ -4,9 +4,7 @@ import styleLines from './helper.js'
 
 function init () {
   fetch(`${window.location.href}data`)
-    .then(res => {
-      return res.json()
-    })
+    .then(res => res.json())
     .then(data => setup(data))
     .catch(err => console.error(err))
 }
