@@ -1,17 +1,19 @@
 <% include head %>
 
-<header>
+    <img class="background-image" src="SVG/huis.svg" alt="background_city">
+    
+    
+    <div class="main-container">
+    <main id="intro">
 
-</header>
 
-<main id="intro">
-
-        <p>Lorem ipsum dolor sit amet</p>
-
-        <h3>Hoelaat vertrek je van Amsterdam Centraal?</h3>
+     
 
         <form action="/start" method="post">
-            <div class="radio-buttons">
+               <img src="SVG/Logo.svg" alt="dataweekborrel_titel"
+                class="logo_dataweek">
+               <h3>Hoelaat vertrek je van Amsterdam Centraal?</h3>
+               <div class="radio-buttons">
                 <input id="9h" type="radio" name="time" value="9">
                 <label for="9h">9:00</label>
 
@@ -28,7 +30,10 @@
 
             <h3>Hmm, even geen zin of lekker fietsen?</h3>
 
-            <div class="car-bike-container"><img src="SVG/Auto.svg" alt="" class="car-select"><img src="SVG/Fiets.svg" alt="" class="bike-select"></div>
+            <div class="car-bike-container">
+
+                <img src="SVG/Auto.svg" alt="" class="car-select">
+                <img src="SVG/Fiets.svg" alt="" class="bike-select"></div>
 
             <div class="radio-buttons-vervoersmiddel">
 
@@ -45,5 +50,5 @@
         </form>
 
     </main>
-
+</div>
 <% include tail %>
