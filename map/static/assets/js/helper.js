@@ -8,13 +8,11 @@ export default function styleLines (feature) {
 
 function getColor (d) {
   switch (true) {
-    case (d < 50):
-      return '#72ff00'
-    case (d >= 50 && d < 150):
-      return '#ffdd00'
-    case (d >= 150 && d < 250):
-      return '#ff8300'
+    case (d < 75):
+      return '#8CC63F'
+    case (d >= 75 && d < 250):
+      return '#F7931E'
     case (d >= 250):
-      return '#ff0000'
+      return '#F04925'
   }
 }

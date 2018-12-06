@@ -8,10 +8,11 @@
   <img src="#" alt="Logo">
   <p>Lorem ipsum dolor sit amet</p>
 
-  <h4>Kies je transportatiemethode</h4>
-
+  <h4>Kies je tijdstip van reizen</h4>
   <form action="/start" method="post">
     <div class="radio-buttons">
+      <label for="now">Nu</label>
+      <input id="now" type="radio" name="time" value="now" checked>
       <label for="9h">9:00</label>
       <input id="9h" type="radio" name="time" value="9">
       <label for="12h">12:00</label>
@@ -22,16 +23,19 @@
       <input id="17h" type="radio" name="time" value="17">
     </div>
 
+    <h4>Kies je transportatiemethode</h4>
     <div class="radio-buttons">
       <label for="radio-car">Auto</label>
-      <input id="radio-car" type="radio" name="transportation" value="car">
+      <input id="radio-car" type="radio" name="transportation" value="car" checked>
       <label for="radio-bike">Fiets</label>
       <input id="radio-bike" type="radio" name="transportation" value="bike">
     </div>
 
-    <input type="submit" class="button">
+    <input type="submit" class="button" id="submit">
   </form>
 
 </main>
+
+<script src="assets/js/script.js"></script>
 
 <% include tail %>
