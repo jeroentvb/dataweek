@@ -1,31 +1,32 @@
 <% include head %>
 
-    <img class="background-image" src="SVG/huis.svg" alt="background_city">
-    
-    
-    <div class="main-container">
-    <main id="intro">
-        <form action="/start" method="post">
-               <img src="SVG/Logo.svg" alt="dataweekborrel_titel" class="logo_dataweek">
-               <h3>Hoelaat vertrek je van Amsterdam Centraal?</h3>
-               <div class="radio-buttons">
-                <label for="now">Nu</label>
-                <input id="now" type="radio" name="time" value="now" checked>
-                
-                <input id="9h" type="radio" name="time" value="9">
-                <label for="9h">9:00</label>
+<img class="background-image" src="assets/images/huis.svg" alt="background_city">
 
-                <input id="12h" type="radio" name="time" value="12">
-                <label for="12h">12:00</label>
 
-                <input id="15h" type="radio" name="time" value="15">
-                <label for="15h">15:00</label>
+<div class="main-container">
+  <main id="intro">
+    <form action="/start" method="post">
+     <img src="assets/images/Logo.svg" alt="dataweekborrel_titel" class="logo_dataweek">
+     <h3>Hoelaat vertrek je van Amsterdam Centraal?</h3>
+     <div class="radio-buttons">
+      <label for="now">Nu</label>
+      <input id="now" type="radio" name="time" value="now" checked>
 
-                <input id="17h" type="radio" name="time" value="17">
-                <label for="17h">17:00</label>
+      <input id="9h" type="radio" name="time" value="9">
+      <label for="9h">9:00</label>
+
+      <input id="12h" type="radio" name="time" value="12">
+      <label for="12h">12:00</label>
+
+      <input id="15h" type="radio" name="time" value="15">
+      <label for="15h">15:00</label>
+
+      <input id="17h" type="radio" name="time" value="17">
+      <label for="17h">17:00</label>
+    </div>
 
   <h4>Kies je tijdstip van reizen</h4>
-  <form action="/start" method="post">
+
     <div class="radio-buttons">
       <label for="now">Nu</label>
       <input id="now" type="radio" name="time" value="now" checked>
@@ -38,27 +39,28 @@
       <label for="17h">17:00</label>
       <input id="17h" type="radio" name="time" value="17">
     </div>
-            </div>
-            
-            <h3>Hmm, even geen zin of lekker fietsen?</h3>
 
-            <div class="car-bike-container">
-                <img src="SVG/Auto.svg" alt="" class="car-select">
-                <img src="SVG/Fiets.svg" alt="" class="bike-select"></div>
+    <h3>Hmm, even geen zin of lekker fietsen?</h3>
 
-            <div class="radio-buttons-vervoersmiddel">
-                <input id="radio-car" type="radio" name="transportation" value="car">
-                <label for="radio-car">Auto </label>
+    <div class="car-bike-container">
+      <img src="assets/images/Auto.svg" alt="" class="car-select">
+      <img src="assets/images/Fiets.svg" alt="" class="bike-select">
+    </div>
 
-                <input id="radio-bike" type="radio" name="transportation" value="bike">
-                <label for="radio-bike">Fiets</label>
-            </div>
+    <div class="radio-buttons-vervoersmiddel">
+      <input id="radio-car" type="radio" name="transportation" value="car">
+      <label for="radio-car">Auto </label>
 
-            <input id="submit-button" type="submit" class="button">
-        </form>
+      <input id="radio-bike" type="radio" name="transportation" value="bike">
+      <label for="radio-bike">Fiets</label>
+    </div>
 
-    </main>
+    <input id="submit-button" type="submit" class="button">
+  </form>
+
+  </main>
 </div>
 
 <script src="assets/js/script.js"></script>
+
 <% include tail %>
