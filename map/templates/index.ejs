@@ -8,9 +8,20 @@
   <img src="#" alt="Logo">
   <p>Lorem ipsum dolor sit amet</p>
 
-  <h3>Kies je transportatiemethode</h3>
+  <h4>Kies je transportatiemethode</h4>
 
   <form action="/start" method="post">
+    <div class="radio-buttons">
+      <label for="9h">9:00</label>
+      <input id="9h" type="radio" name="time" value="9">
+      <label for="12h">12:00</label>
+      <input id="12h" type="radio" name="time" value="12">
+      <label for="15h">15:00</label>
+      <input id="15h" type="radio" name="time" value="15">
+      <label for="17h">17:00</label>
+      <input id="17h" type="radio" name="time" value="17">
+    </div>
+
     <div class="radio-buttons">
       <label for="radio-car">Auto</label>
       <input id="radio-car" type="radio" name="transportation" value="car">
@@ -18,7 +29,7 @@
       <input id="radio-bike" type="radio" name="transportation" value="bike">
     </div>
 
-    <input type="submit" class="button"></input>
+    <input type="submit" class="button">
   </form>
 
 </main>
