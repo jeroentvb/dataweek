@@ -168,7 +168,6 @@ input[type=radio]:checked+label {
   bottom: 0;
   left: 10em;
   margin-bottom: 7.5em;
-  display: none;
 }
 
 #bike {
@@ -178,16 +177,65 @@ input[type=radio]:checked+label {
   bottom: 0;
   left: 10em;
   margin-bottom: 7.5em;
-  display: none;
 }
+
+#WJD1, #WJD2, #WJD3 {
+  position: fixed;
+  z-index: 100;
+  width: 22em;
+  height: 22em;
+  top: 0;
+  margin-top: 4vh;
+  opacity: 0;
+  margin-left: 25%;
+}
+
+/* #WJD1 {
+  left: 137em;
+}
+
+#WJD2 {
+  left: 254em;
+}
+
+#WJD3 {
+  left: 389em;
+} */
 
 #map {
   width: calc(100vw / 3);
   height: 100vh;
   position: fixed;
   right: 0;
+  z-index: 9999;
 }
 
 .leaflet-control-container {
   display: none;
+}
+
+.show-popup {
+  animation: show-popup .4s forwards ease-in-out;
+}
+
+.hide-popup {
+  animation: hide-popup .4s forwards ease-in-out;
+}
+
+@keyframes show-popup {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes hide-popup {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
