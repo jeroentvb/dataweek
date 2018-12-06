@@ -28,30 +28,27 @@ main#intro {
   justify-content: center;
   width: 100vw;
   height: 100vh;
-  
-  
+
+
 }
 
 /*Aangepast*/
 
 .background-image {
-    position: absolute;
-    /*margin-top: 8vh;*/
+    position: fixed;
     overflow: auto;
     background-color:#e1e1e1;
+    height: 100vh;
     width: 100%;
-    height: auto;
     z-index: -10;
-    
 }
 
 form {
- 
+   height: 80vh;
 }
 
 h1, h2, h3, p, a {
     color: #666;
-    
 }
 
 label {
@@ -63,27 +60,33 @@ form h3 {
 }
 
 .main-container {
-    background-color:rgba(255,255,255,0.6);
+    background-color: rgba(255,255,255,0.45);
+    /* background-color: white; */
     width: 70%;
+    /* height: 140vh; */
 }
 
-/*
-.logo_dataweek {
-    position: absolute;
-    width: 10vw;
-    top: 5vw;
-    left: 25%;
-    
+
+.logo-dataweek {
+    position: fixed;
+    width: 25vw;
+    top: 0;
+    left: 0;
+    margin: 2em;
 }
-*/
+
 
 input {
     display: none;
 }
 
+input+label:hover {
+  cursor: pointer;
+}
+
 label {
     padding:1em;
-    margin-left: auto; 
+    margin-left: auto;
     margin-right: auto;
     background-color: #ffb655;
     border-radius: 5px;
@@ -101,9 +104,9 @@ input[type=radio]:checked+label {
     color: #FFF;
     padding: 1em;
     border-radius: 5px;
-    
+
 }
- 
+
 .car-bike-container {
     display: flex;
     flex-direction: row;
@@ -127,7 +130,7 @@ input[type=radio]:checked+label {
 }
 
 .radio-buttons-vervoersmiddel {
-   padding: 2em; 
+   padding: 2em;
 }
 
 .radio-buttons-vervoersmiddel label {
@@ -138,7 +141,7 @@ input[type=radio]:checked+label {
   border: 1px solid black;
 }
 
-#submit-button {
+#submit {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -150,6 +153,10 @@ input[type=radio]:checked+label {
     font-size: 1em;
     margin-bottom: 10vh;
     color: #fff;
+}
+
+#submit:hover {
+  cursor: pointer;
 }
 
 
