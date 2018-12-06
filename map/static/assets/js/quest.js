@@ -11,7 +11,6 @@ function init () {
   })
 
   const prefs = JSON.parse(localStorage.getItem('data'))
-  console.log(prefs)
 
   let url
   if (prefs.time === 'now') {
@@ -51,50 +50,65 @@ function setup (trafficData, prefs) {
   addPopups(prefs.transportation)
 }
 
-function showPopup (el) {
-  el.removeClass('hide-popup')
-  el.addClass('show-popup')
+function show (el) {
+  el.removeClass('hide')
+  el.addClass('show')
 }
 
-function hidePopup (el) {
-  if (el.hasClass('show-popup')) {
-    el.removeClass('show-popup')
-    el.addClass('hide-popup')
+function hide (el) {
+  if (el.hasClass('show')) {
+    el.removeClass('show')
+    el.addClass('hide')
   }
 }
 
 function addPopups (transport) {
   $(document).scroll(function () {
     let x = $(this).scrollLeft()
-    console.log(x)
+    if (x > 10) {
+      if (transport === 'car') $('.transport').addClass('car-moving')
+      if (transport === 'bike') $('.transport').addClass('bike-moving')
+    }
     if (x < 1500) {
       if (transport === 'car') $('#beer').attr('src', 'assets/images/Bier/Bier-o-meter_01.svg')
     }
     if (x > 1500 && x < 2450) {
-      showPopup($('.WDJ1'))
+      show($('.WDJ1'))
       if (transport === 'car') $('#beer').attr('src', 'assets/images/Bier/Bier-o-meter_03.svg')
     } else {
-      hidePopup($('.WDJ1'))
+      hide($('.WDJ1'))
     }
 
     if (x > 3500 && x < 4350) {
-      showPopup($('.WDJ2'))
+      show($('.WDJ2'))
       if (transport === 'car') $('#beer').attr('src', 'assets/images/Bier/Bier-o-meter_04.svg')
     } else {
-      hidePopup($('.WDJ2'))
+      hide($('.WDJ2'))
     }
 
     if (x > 5500 && x < 6350) {
-      showPopup($('.WDJ3'))
+      show($('.WDJ3'))
       if (transport === 'car') $('#beer').attr('src', 'assets/images/Bier/Bier-o-meter_05.svg')
       if (transport === 'bike') $('#beer').attr('src', 'assets/images/Bier/Bier-o-meter_01.svg')
     } else {
-      hidePopup($('.WDJ3'))
+      hide($('.WDJ3'))
     }
 
-    if (x >= 6700) {
+    if (x >= 6500) {
       if (transport === 'car') $('#beer').attr('src', 'assets/images/Bier/Bier-o-meter_final_auto_1.svg')
       if (transport === 'bike') $('#beer').attr('src', 'assets/images/Bier/Bier-o-meter_final_fiets.svg')
+    }
+
+    if (x >= 6500) {
+      show($('#final-bg'))
+      show($('#final-img'))
+      show($('#retry-button'))
+    }
+
+    if (x < 6500) {
+      hide($('#final-bg'))
+      hide($('#final-img'))
+      hide($('#retry-button'))
     }
   })
 }

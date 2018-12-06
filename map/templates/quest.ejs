@@ -18,6 +18,13 @@
   <% } %>
 </main>
 <img id="beer" src="assets/images/Bier/Bier-o-meter_01.svg" alt="Bier">
+<% if (data.transportation === 'car') { %>
+  <img id="final-img" src="assets/images/FINAL_SOEPKIP.svg" alt="SOEPKIP">
+<% } else { %>
+  <img id="final-img" src="assets/images/FINAL_TOPPER.svg" alt="TOPPER">
+<% } %>
+<div id="final-bg"></div>
+<a href="/" id="retry-button">Opnieuw proberen?</a>
 <div id="map"></div>
 
 <script src="assets/js/jkwerie.js"></script>

@@ -66,10 +66,20 @@ form h3 {
     /* height: 140vh; */
 }
 
+.left-background {
+  position: fixed;
+  background-color: rgba(255,255,255,0.4);
+  left: 0;
+  top: 0;
+  width: calc(100vw / 4);
+  z-index: -1;
+  height: 100vh;
+}
+
 
 .logo-dataweek {
     position: fixed;
-    width: 25vw;
+    width: 19vw;
     top: 0;
     left: 0;
     margin: 2em;
@@ -88,8 +98,9 @@ label {
     padding:1em;
     margin-left: auto;
     margin-right: auto;
-    background-color: #ffb655;
+    background-color: #fff;
     border-radius: 5px;
+    color: #666;
 }
 input[type=radio]:checked+label {
     background-color: #9adbf9;
@@ -219,6 +230,16 @@ input[type=radio]:checked+label {
   width: 10em;
 }
 
+#intro-text {
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  margin-top: 35vh;
+  margin-left: 2em;
+  width: 19vw;
+}
+
 #map {
   width: calc(100vw / 3);
   height: 100vh;
@@ -228,30 +249,70 @@ input[type=radio]:checked+label {
 }
 
 #beer {
-  z-index: 10000;
+  z-index: 10001;
   position: fixed;
   right: 0;
   top: 0;
   width: 12em;
   margin: 0.5em;
-  background-color: #C7C7C7;
+  background-color: rgba(0,0,0,0.9);
   border-radius: 5%;
   padding: 1em;
+}
+
+#final-img {
+  z-index: 10002;
+  width: calc(100vw / 3 * 2);
+  height: 75vh;
+  position: fixed;
+  left: 0;
+  top: 10vh;
+  opacity: 0;
+}
+
+#final-bg {
+  position: fixed;
+  background-color: rgba(0,0,0,0.7);
+  width: calc(100vw / 3 * 2);
+  height: 100vh;
+  left: 0;
+  top: 0;
+  z-index: 10001;
+  opacity: 0;
+}
+
+#retry-button {
+  position: fixed;
+  width: calc(100vw / 3 * 2);
+  width: 10em;
+  bottom: 0;
+  left: 0;
+  margin-left: calc(100vw / 3 * 2 / 3 + 3vw);
+  margin-bottom: 2em;
+  z-index: 10002;
+  background-color: #9adbf9;
+  padding: .5em .8em;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  opacity: 0;
 }
 
 .leaflet-control-container {
   display: none;
 }
 
-.show-popup {
-  animation: show-popup .4s forwards ease-in-out;
+.show {
+  animation: show .4s forwards ease-in-out;
 }
 
-.hide-popup {
-  animation: hide-popup .4s forwards ease-in-out;
+.hide {
+  animation: hide .4s forwards ease-in-out;
 }
 
-@keyframes show-popup {
+
+@keyframes show {
   from {
     opacity: 0;
   }
@@ -260,11 +321,47 @@ input[type=radio]:checked+label {
   }
 }
 
-@keyframes hide-popup {
+@keyframes hide {
   from {
     opacity: 1;
   }
   to {
     opacity: 0;
   }
+}
+
+.bike-moving {
+  animation-name: move;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-duration: 2s;
+
+}
+
+.car-moving {
+  animation-name: move;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-duration: 0.7s;
+
+}
+
+@keyframes move {
+    0% {
+        transform:translateY(0em);
+
+    }
+    20% {
+        transform:translateY(0.3em);
+
+    }
+    40% {
+        transform:translateY(0em);
+
+    }
+    60% {
+        transform:translateY(-0.3em);
+
+    }
+
 }
