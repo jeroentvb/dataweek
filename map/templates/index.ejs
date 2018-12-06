@@ -5,33 +5,45 @@
 </header>
 
 <main id="intro">
-  <img src="#" alt="Logo">
-  <p>Lorem ipsum dolor sit amet</p>
 
-  <h4>Kies je transportatiemethode</h4>
+        <p>Lorem ipsum dolor sit amet</p>
 
-  <form action="/start" method="post">
-    <div class="radio-buttons">
-      <label for="9h">9:00</label>
-      <input id="9h" type="radio" name="time" value="9">
-      <label for="12h">12:00</label>
-      <input id="12h" type="radio" name="time" value="12">
-      <label for="15h">15:00</label>
-      <input id="15h" type="radio" name="time" value="15">
-      <label for="17h">17:00</label>
-      <input id="17h" type="radio" name="time" value="17">
-    </div>
+        <h3>Hoelaat vertrek je van Amsterdam Centraal?</h3>
 
-    <div class="radio-buttons">
-      <label for="radio-car">Auto</label>
-      <input id="radio-car" type="radio" name="transportation" value="car">
-      <label for="radio-bike">Fiets</label>
-      <input id="radio-bike" type="radio" name="transportation" value="bike">
-    </div>
+        <form action="/start" method="post">
+            <div class="radio-buttons">
+                <input id="9h" type="radio" name="time" value="9">
+                <label for="9h">9:00</label>
 
-    <input type="submit" class="button">
-  </form>
+                <input id="12h" type="radio" name="time" value="12">
+                <label for="12h">12:00</label>
 
-</main>
+                <input id="15h" type="radio" name="time" value="15">
+                <label for="15h">15:00</label>
+
+                <input id="17h" type="radio" name="time" value="17">
+                <label for="17h">17:00</label>
+
+            </div>
+
+            <h3>Hmm, even geen zin of lekker fietsen?</h3>
+
+            <div class="car-bike-container"><img src="SVG/Auto.svg" alt="" class="car-select"><img src="SVG/Fiets.svg" alt="" class="bike-select"></div>
+
+            <div class="radio-buttons-vervoersmiddel">
+
+
+                <input id="radio-car" type="radio" name="transportation" value="car">
+                <label for="radio-car">Auto </label>
+
+                <input id="radio-bike" type="radio" name="transportation" value="bike">
+                <label for="radio-bike">Fiets</label>
+
+            </div>
+
+            <input id="submit-button" type="submit" class="button">
+        </form>
+
+    </main>
 
 <% include tail %>
