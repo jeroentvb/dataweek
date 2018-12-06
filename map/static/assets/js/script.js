@@ -4,7 +4,15 @@ const submit = document.getElementById('submit')
 
 submit.addEventListener('click', event => {
   let selectedTime = document.getElementsByName('time')
-  selectedTime.forEach(time => {
-    if (time.checked) localStorage.setItem('selectedTime', time.value)
+  let selectedTransport = document.getElementsByName('transportation')
+  let data = {}
+
+  selectedTransport.forEach(method => {
+    if (method.checked) data.transportation = method.value
   })
+  selectedTime.forEach(time => {
+    if (time.checked) data.time = time.value
+  })
+
+  localStorage.setItem('data', JSON.stringify(data))
 })
