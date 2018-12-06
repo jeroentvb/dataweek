@@ -17,8 +17,31 @@ body {
   overflow-y: hidden;
 }
 
-main {
+main#quest {
   width: calc(100vw / 3 * 2);
+}
+
+main#intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.radio-buttons {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 2em;
+}
+
+.radio-buttons input {
+  padding-right: 2em;
+}
+
+.button {
+  border: 1px solid black;
 }
 
 #BG {
@@ -26,9 +49,33 @@ main {
   margin-right: calc(100vw / 3);
 }
 
+#car  {
+  z-index: 100;
+  width: 20vw;
+  position: fixed;
+  bottom: 0;
+  left: 10em;
+  margin-bottom: 7.5em;
+  display: none;
+}
+
+#bike {
+  z-index: 100;
+  width: 13vw;
+  position: fixed;
+  bottom: 0;
+  left: 10em;
+  margin-bottom: 7.5em;
+  display: none;
+}
+
 #map {
   width: calc(100vw / 3);
   height: 100vh;
   position: fixed;
   right: 0;
+}
+
+.leaflet-control-container {
+  display: none;
 }
