@@ -3,12 +3,12 @@
 import styleLines from './helper.js'
 
 function init () {
-  window.addEventListener('wheel', event => {
-    if (event.deltaY !== 0) {
-      window.scroll(window.scrollX + event.deltaY * 5, window.scrollY)
-      event.preventDefault()
-    }
-  })
+  // window.addEventListener('wheel', event => {
+  //   if (event.deltaY !== 0) {
+  //     window.scroll(window.scrollX + event.deltaY * 5, window.scrollY)
+  //     event.preventDefault()
+  //   }
+  // })
 
   const prefs = JSON.parse(localStorage.getItem('data'))
 
@@ -86,7 +86,7 @@ function addPopups (transport) {
       hide($('.WDJ2'))
     }
 
-    if (x > 5500 && x < 6350) {
+    if (x > 4800 && x < 5650) {
       show($('.WDJ3'))
       if (transport === 'car') $('#beer').attr('src', 'assets/images/Bier/Bier-o-meter_05.svg')
       if (transport === 'bike') $('#beer').attr('src', 'assets/images/Bier/Bier-o-meter_01.svg')
@@ -94,12 +94,12 @@ function addPopups (transport) {
       hide($('.WDJ3'))
     }
 
-    if (x >= 6500) {
+    if (x >= 5800) {
       if (transport === 'car') $('#beer').attr('src', 'assets/images/Bier/Bier-o-meter_final_auto_1.svg')
       if (transport === 'bike') $('#beer').attr('src', 'assets/images/Bier/Bier-o-meter_final_fiets.svg')
     }
 
-    if (x >= 6500) {
+    if (x >= 5800) {
       show($('#final-bg'))
       show($('#final-img'))
       show($('#retry-button'))
