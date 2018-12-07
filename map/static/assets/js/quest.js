@@ -99,13 +99,13 @@ function addPopups (transport) {
       if (transport === 'bike') $('#beer').attr('src', 'assets/images/Bier/Bier-o-meter_final_fiets.svg')
     }
 
-    if (x >= 5800) {
+    if (x >= 8800) {
       show($('#final-bg'))
       show($('#final-img'))
       show($('#retry-button'))
     }
 
-    if (x < 6500) {
+    if (x < 8500) {
       hide($('#final-bg'))
       hide($('#final-img'))
       hide($('#retry-button'))
