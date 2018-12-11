@@ -14,4 +14,4 @@ npm install
 node index.js
 ```
 
-To use the offline version, simply op `index.html` in the root of this repo.
+To use the offline version, simply open `index.html` in the root of this repo.
